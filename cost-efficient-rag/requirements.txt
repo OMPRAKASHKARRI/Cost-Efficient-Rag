@@ -2,6 +2,7 @@
 fastapi>=0.100.0
 uvicorn[standard]>=0.22.0
 pydantic>=2.0
+python-multipart
 pydantic-settings>=2.0        # NOTE: added — pydantic v2 split BaseSettings out of core pydantic;
                                # required to satisfy "load parameters dynamically using Pydantic"
 
