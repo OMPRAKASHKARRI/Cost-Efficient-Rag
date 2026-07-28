@@ -1,13 +1,4 @@
-"""
-Document ingestion pipeline: load → chunk → hash → deduplicate.
 
-This module has no knowledge of the vector store. It turns a file on disk
-into a list of :class:`ChunkRecord` objects with deterministic, content-
-addressed IDs. Deduplication against what's already stored is done by
-passing in the *caller's* set of existing IDs (typically fetched from
-``VectorStoreManager`` — see ``src/vector_store.py``) — this keeps ingestion
-pure and independently testable.
-"""
 
 from __future__ import annotations
 

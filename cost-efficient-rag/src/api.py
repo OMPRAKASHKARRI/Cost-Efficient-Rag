@@ -1,22 +1,4 @@
-"""
-FastAPI application exposing the RAG service.
 
-Endpoints
----------
-POST /ingest  — upload PDF/HTML/Markdown files; ingests, chunks, embeds,
-                and idempotently upserts them into the vector store.
-POST /query   — ask a question; returns a grounded, cited answer (or the
-                fallback message) plus latency/token/cost metrics.
-GET  /health  — liveness check.
-
-Design decision: all expensive singletons (embedding model, vector store
-connection, LLM client) are constructed once via ``lru_cache``-wrapped
-factory functions and injected with FastAPI's ``Depends`` — this means a
-model is loaded once per process, not once per request, and it means every
-handler is trivially testable by overriding these dependencies with fakes
-(see ``tests/test_api.py``) rather than needing a live LanceDB table or
-OpenAI key to exercise routing/validation logic.
-"""
 
 from __future__ import annotations
 

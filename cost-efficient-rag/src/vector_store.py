@@ -1,25 +1,4 @@
-"""
-Vector store: embedding generation + LanceDB table management.
 
-Two responsibilities live here, kept as separate classes so each is
-independently testable and swappable:
-
-* :class:`EmbeddingModel` — wraps ``sentence-transformers`` and records the
-  model name + output dimensionality every embedding batch was produced
-  with (the reference guide requires recording both in metadata).
-* :class:`VectorStoreManager` — owns the LanceDB connection/table, builds
-  the on-disk schema, performs idempotent upserts, and runs top-k
-  similarity search with optional metadata filtering and a similarity
-  floor.
-
-Both ``lancedb``/``pyarrow`` and ``sentence-transformers`` are imported
-lazily, inside methods rather than at module load time. This is not just a
-sandbox workaround: it means importing this module (e.g. for a health
-check, or for unit-testing the pure SQL-filter-building logic below) never
-pays the cost of loading a transformer model or a Rust extension, and it
-means a machine without those packages installed can still run the parts
-of the test suite that don't need them.
-"""
 
 from __future__ import annotations
 

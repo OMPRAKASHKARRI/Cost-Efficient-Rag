@@ -1,22 +1,4 @@
-"""
-Logging setup.
 
-Two separate sinks are configured on top of ``loguru``:
-
-1. A human-readable console sink (level controlled by ``settings.log_level``)
-   for normal operational logging — startup messages, warnings, errors.
-2. A machine-readable JSON-Lines file sink (``logs/metrics.jsonl``) that
-   receives *only* structured per-query metrics records emitted through
-   :func:`log_query_metrics`. This file is what the evaluation harness and
-   the cost/latency analysis (p50/p95) read back — logging is the source of
-   truth for latency numbers, not something recomputed after the fact.
-
-Design decision: metrics are logged as flat JSON objects (one per line)
-rather than nested loguru ``extra`` dicts printed as text, because
-``eval/cost_analysis.py`` and the README's latency table need to
-``pandas.read_json(..., lines=True)`` this file directly with no parsing
-logic duplicated between the app and the eval scripts.
-"""
 
 from __future__ import annotations
 
