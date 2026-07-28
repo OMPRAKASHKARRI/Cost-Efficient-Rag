@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+logs/
+data/lancedb_store/
+*.egg-info/
+.pytest_cache/
+.DS_Store

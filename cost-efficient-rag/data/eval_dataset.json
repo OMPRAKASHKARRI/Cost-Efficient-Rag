@@ -1,0 +1,135 @@
+{
+  "chunking_config": {"chunk_size": 500, "chunk_overlap": 50},
+  "source_documents": [
+    "data/raw_documents/pricing_and_plans.md",
+    "data/raw_documents/faq.html",
+    "data/raw_documents/onboarding_guide.pdf"
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "question": "How many API calls does the Free plan include per month?",
+      "ground_truth_answer": "The Free plan includes 1,000 API calls per month.",
+      "relevant_chunk_ids": ["6bb8570fa5d06c851a8918a21395ee167878134e7cfbf5bcec2b74b23cebeb7d"]
+    },
+    {
+      "id": "q02",
+      "question": "How much does the Pro plan cost per seat per month?",
+      "ground_truth_answer": "The Pro plan costs $49 per month per seat.",
+      "relevant_chunk_ids": ["6bb8570fa5d06c851a8918a21395ee167878134e7cfbf5bcec2b74b23cebeb7d"]
+    },
+    {
+      "id": "q03",
+      "question": "How long is chunk data retained on the Pro plan?",
+      "ground_truth_answer": "Pro plan data is retained for 90 days.",
+      "relevant_chunk_ids": ["6bb8570fa5d06c851a8918a21395ee167878134e7cfbf5bcec2b74b23cebeb7d"]
+    },
+    {
+      "id": "q04",
+      "question": "Does the Enterprise plan include an uptime SLA, and what percentage is guaranteed?",
+      "ground_truth_answer": "Yes, the Enterprise plan includes a 99.9% uptime SLA.",
+      "relevant_chunk_ids": ["52359335aefcca7e16af59e77f41c135f5be940e1186ba968d4ea1d7dbfe8add"]
+    },
+    {
+      "id": "q05",
+      "question": "What discount applies to annual billing on the Pro and Enterprise plans?",
+      "ground_truth_answer": "Annual billing gets a 15% discount on the total contract value.",
+      "relevant_chunk_ids": ["52359335aefcca7e16af59e77f41c135f5be940e1186ba968d4ea1d7dbfe8add"]
+    },
+    {
+      "id": "q06",
+      "question": "What happens if I cancel my subscription in the middle of a billing period?",
+      "ground_truth_answer": "Cancellation takes effect at the end of the current billing period, and no partial refunds are issued for the remaining days.",
+      "relevant_chunk_ids": ["d18f1e14ecc9ec1062ff2a7efd137d887caec0406d4c2fb9aaee4f3bd133ac57"]
+    },
+    {
+      "id": "q07",
+      "question": "What payment methods does Synergy Labs accept?",
+      "ground_truth_answer": "Visa, Mastercard, and American Express for monthly billing; Enterprise customers can also pay by wire transfer against a quarterly invoice.",
+      "relevant_chunk_ids": ["d18f1e14ecc9ec1062ff2a7efd137d887caec0406d4c2fb9aaee4f3bd133ac57"]
+    },
+    {
+      "id": "q08",
+      "question": "What are Synergy Labs' standard support hours?",
+      "ground_truth_answer": "Standard support is available Monday through Friday, 9 AM to 5 PM Eastern Time.",
+      "relevant_chunk_ids": ["4b0a0de5611cfdf2a40a74128336bcd1ae8f08b7ed8e146b208abc88263b94cc"]
+    },
+    {
+      "id": "q09",
+      "question": "Is Synergy Labs SOC 2 compliant, and when was the audit completed?",
+      "ground_truth_answer": "Yes, Synergy Labs completed its SOC 2 Type II audit in March 2025 and re-certifies annually.",
+      "relevant_chunk_ids": ["4b0a0de5611cfdf2a40a74128336bcd1ae8f08b7ed8e146b208abc88263b94cc"]
+    },
+    {
+      "id": "q10",
+      "question": "What is the default API rate limit per key?",
+      "ground_truth_answer": "The default rate limit is 60 requests per minute per API key.",
+      "relevant_chunk_ids": [
+        "4b0a0de5611cfdf2a40a74128336bcd1ae8f08b7ed8e146b208abc88263b94cc",
+        "016d4a1dc2c29d0bc5343cfa16f062a6f5b6d80e596ca43063a3950069498515"
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "How can Enterprise customers get a higher API rate limit?",
+      "ground_truth_answer": "By contacting their account manager; Enterprise customers can request up to 600 requests per minute.",
+      "relevant_chunk_ids": ["016d4a1dc2c29d0bc5343cfa16f062a6f5b6d80e596ca43063a3950069498515"]
+    },
+    {
+      "id": "q12",
+      "question": "How is customer data encrypted at rest and in transit?",
+      "ground_truth_answer": "Data is encrypted at rest with AES-256 and in transit with TLS 1.3, with encryption keys rotated every 90 days.",
+      "relevant_chunk_ids": ["016d4a1dc2c29d0bc5343cfa16f062a6f5b6d80e596ca43063a3950069498515"]
+    },
+    {
+      "id": "q13",
+      "question": "Can customers export their data, and does it cost extra?",
+      "ground_truth_answer": "Yes, customers on any plan can export their full dataset as CSV or JSON at any time, with no additional fee.",
+      "relevant_chunk_ids": ["c49359c7bfebff3a9c57f55394b1dc769b0b120daed3361405d9c0b516f251e3"]
+    },
+    {
+      "id": "q14",
+      "question": "What must I do immediately after creating my Synergy Labs account?",
+      "ground_truth_answer": "You must verify your email within 24 hours or the signup link expires.",
+      "relevant_chunk_ids": ["af138d7bbd8a032ebf1e22d4446aae76fba40d873a9fbf309922dc8423817624"]
+    },
+    {
+      "id": "q15",
+      "question": "How long does the first data sync typically take for datasets under 1 GB?",
+      "ground_truth_answer": "The first sync typically completes within 10 minutes for datasets under 1 GB.",
+      "relevant_chunk_ids": ["af138d7bbd8a032ebf1e22d4446aae76fba40d873a9fbf309922dc8423817624"]
+    },
+    {
+      "id": "q16",
+      "question": "How long do team invitations remain valid before they expire?",
+      "ground_truth_answer": "Invitations expire after 7 days if not accepted.",
+      "relevant_chunk_ids": ["8650b57310761563f2158bb630467203eb00b3d6d426f397004490709349166f"]
+    },
+    {
+      "id": "q17",
+      "question": "How often are alert rules evaluated?",
+      "ground_truth_answer": "Alerts are evaluated every 60 seconds.",
+      "relevant_chunk_ids": ["8650b57310761563f2158bb630467203eb00b3d6d426f397004490709349166f"]
+    },
+    {
+      "id": "q18",
+      "question": "What must be configured before activating a workspace, and can activation be undone?",
+      "ground_truth_answer": "The data source, team, and alerts must be configured first; activation cannot be undone without contacting support.",
+      "relevant_chunk_ids": ["7bbbe3db1c5a138c1636bbb83807b1114d49a1bd016719a188cb9d127918bfe4"]
+    },
+    {
+      "id": "q19",
+      "question": "What is Synergy Labs' stock ticker symbol?",
+      "ground_truth_answer": "NO_ANSWER_IN_CONTEXT",
+      "relevant_chunk_ids": [],
+      "expect_fallback": true
+    },
+    {
+      "id": "q20",
+      "question": "Does Synergy Labs offer a native iOS mobile app?",
+      "ground_truth_answer": "NO_ANSWER_IN_CONTEXT",
+      "relevant_chunk_ids": [],
+      "expect_fallback": true
+    }
+  ]
+}

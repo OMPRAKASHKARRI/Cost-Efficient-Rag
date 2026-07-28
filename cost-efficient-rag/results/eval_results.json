@@ -1,0 +1,389 @@
+{
+  "backend": "offline-tfidf+extractive (no network/model/API access in this environment)",
+  "note": "This run used the offline TF-IDF + extractive-answer backend (see eval/local_retriever.py and scripts/run_eval.py) because the environment this repo was assembled in has no network access -- sentence-transformers cannot download model weights and there is no OpenAI API key/connectivity. All retrieval and answer-quality METRIC CODE (eval/evaluate_retrieval.py, eval/evaluate_answer.py) is the real, spec-compliant implementation and is fully unit-tested against hand-verified values -- only the retriever and generator that FED it numbers are offline stand-ins. Re-run `python scripts/run_eval.py` with USE_OFFLINE_BACKEND=False after `pip install -r requirements.txt` and setting OPENAI_API_KEY to get production-backend numbers.",
+  "config": {
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "top_k": 3,
+    "num_chunks_in_corpus": 9,
+    "num_eval_questions": 20
+  },
+  "retrieval_metrics": {
+    "k": 3,
+    "num_queries_evaluated": 18,
+    "num_queries_excluded_no_gold": 2,
+    "mean_recall_at_k": 0.9722222222222222,
+    "mean_hit_rate_at_k": 1.0,
+    "mean_mrr": 0.9722222222222222,
+    "mean_ndcg_at_k": 0.9580042747964952,
+    "mean_context_precision_at_k": 0.5925925925925926,
+    "per_query": [
+      {
+        "question_id": "q01",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.5
+      },
+      {
+        "question_id": "q02",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q03",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q04",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.5
+      },
+      {
+        "question_id": "q05",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q06",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.5
+      },
+      {
+        "question_id": "q07",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q08",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q09",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 1.0
+      },
+      {
+        "question_id": "q10",
+        "recall_at_k": 0.5,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.6131471927654584,
+        "context_precision_at_k": 1.0
+      },
+      {
+        "question_id": "q11",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q12",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 1.0
+      },
+      {
+        "question_id": "q13",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q14",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 0.5,
+        "ndcg_at_k": 0.6309297535714575,
+        "context_precision_at_k": 0.3333333333333333
+      },
+      {
+        "question_id": "q15",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 1.0
+      },
+      {
+        "question_id": "q16",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 0.5
+      },
+      {
+        "question_id": "q17",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 1.0
+      },
+      {
+        "question_id": "q18",
+        "recall_at_k": 1.0,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "context_precision_at_k": 1.0
+      },
+      {
+        "question_id": "q19",
+        "recall_at_k": 0.0,
+        "hit_rate_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "context_precision_at_k": 0.0
+      },
+      {
+        "question_id": "q20",
+        "recall_at_k": 0.0,
+        "hit_rate_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "context_precision_at_k": 0.0
+      }
+    ]
+  },
+  "answer_metrics": {
+    "num_queries": 20,
+    "num_answers_scored": 20,
+    "num_fallback_responses": 0,
+    "mean_faithfulness": 0.6115,
+    "mean_answer_relevance": 0.3817,
+    "fallback_accuracy": 0.9,
+    "per_query": [
+      {
+        "question_id": "q01",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.8095,
+        "answer_relevance": 0.5517
+      },
+      {
+        "question_id": "q02",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.8261,
+        "answer_relevance": 0.4667
+      },
+      {
+        "question_id": "q03",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.6,
+        "answer_relevance": 0.75
+      },
+      {
+        "question_id": "q04",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.3333,
+        "answer_relevance": 0.3077
+      },
+      {
+        "question_id": "q05",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevance": 0.5833
+      },
+      {
+        "question_id": "q06",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.7143,
+        "answer_relevance": 0.1538
+      },
+      {
+        "question_id": "q07",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.7333,
+        "answer_relevance": 0.4
+      },
+      {
+        "question_id": "q08",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.6667,
+        "answer_relevance": 0.0833
+      },
+      {
+        "question_id": "q09",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.5556,
+        "answer_relevance": 0.3636
+      },
+      {
+        "question_id": "q10",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.6923,
+        "answer_relevance": 0.8182
+      },
+      {
+        "question_id": "q11",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.4286,
+        "answer_relevance": 0.0
+      },
+      {
+        "question_id": "q12",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.4286,
+        "answer_relevance": 0.2
+      },
+      {
+        "question_id": "q13",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.5,
+        "answer_relevance": 0.0952
+      },
+      {
+        "question_id": "q14",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.5556,
+        "answer_relevance": 0.0
+      },
+      {
+        "question_id": "q15",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.7333,
+        "answer_relevance": 0.8462
+      },
+      {
+        "question_id": "q16",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.6364,
+        "answer_relevance": 0.7778
+      },
+      {
+        "question_id": "q17",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.5556,
+        "answer_relevance": 0.7143
+      },
+      {
+        "question_id": "q18",
+        "fallback_triggered": false,
+        "expect_fallback": false,
+        "fallback_correct": 1.0,
+        "faithfulness": 0.6,
+        "answer_relevance": 0.5217
+      },
+      {
+        "question_id": "q19",
+        "fallback_triggered": false,
+        "expect_fallback": true,
+        "fallback_correct": 0.0,
+        "faithfulness": 0.5556,
+        "answer_relevance": 0.0
+      },
+      {
+        "question_id": "q20",
+        "fallback_triggered": false,
+        "expect_fallback": true,
+        "fallback_correct": 0.0,
+        "faithfulness": 0.5556,
+        "answer_relevance": 0.0
+      }
+    ]
+  },
+  "latency_ms": {
+    "p50": 0.889,
+    "p95": 1.354,
+    "note": "Latencies are for the offline TF-IDF backend and are NOT representative of production latency (real embedding + LanceDB search + OpenAI generation will be substantially higher, dominated by the LLM call)."
+  },
+  "cost_benchmark": [
+    {
+      "vector_count": 100000,
+      "embedding_dim": 384,
+      "storage_size_gb": 0.1907,
+      "embedded_db_monthly_cost_usd": 0.0153,
+      "managed_db_monthly_cost_usd": 70.0,
+      "savings_percentage": 99.98
+    },
+    {
+      "vector_count": 1000000,
+      "embedding_dim": 384,
+      "storage_size_gb": 1.9073,
+      "embedded_db_monthly_cost_usd": 0.1526,
+      "managed_db_monthly_cost_usd": 280.0,
+      "savings_percentage": 99.95
+    },
+    {
+      "vector_count": 10000000,
+      "embedding_dim": 384,
+      "storage_size_gb": 19.0735,
+      "embedded_db_monthly_cost_usd": 1.5259,
+      "managed_db_monthly_cost_usd": 1200.0,
+      "savings_percentage": 99.87
+    }
+  ],
+  "estimated_llm_query_cost": {
+    "monthly_query_volume": 50000,
+    "avg_cost_per_query_usd": 0.0001305,
+    "estimated_monthly_llm_cost_usd": 6.53
+  }
+}
